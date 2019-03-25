@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>登录</title>
 		<link href="./css/bootstrap.min.css" rel="stylesheet">
+		<link href="./css/csshake.min.css" rel="stylesheet">
 		<script src="./plugins/jQuery/jquery-2.2.3.min.js"></script>
 		<script src="./js/bootstrap.min.js"></script>
 		<script src="./plugins/angularjs/angular.min.js"></script>
@@ -19,34 +20,36 @@
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<br>
+			<div ng-mouseover="shake=true" ng-mouseleave="shake=false">
 			<nav class="navbar navbar-default" role="navigation">
-				<div class="navbar-header">
+				<div class="navbar-header shake shake-little">
 					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">首页</a>
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li>
-							 <a href="#">全部问题</a>
+							 <a ng-click="click=true" class=" shake shake-little">全部问题</a>
 						</li>
 						<li>
-							 <a href="#">关于</a>
+							 <a href="#" class=" shake shake-little">关于</a>
 						</li>
 						
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="#">登录</a>
+							<a href="#" class=" shake shake-little">登录</a>
 							
 						</li>
 						<li>
-							<a href="#">我要提问</a>
+							<a href="#" class=" shake shake-little">我要提问</a>
 							
 						</li>
 					</ul>
 				</div>
 				
 			</nav>
+			</div>
 			<div class="jumbotron">
 				<h1>
 					Hello, I have a question!
@@ -55,13 +58,16 @@
 					这是一个在线问答平台
 				</p>
 				<p>
-					 <a class="btn btn-primary btn-large" href="#">Learn more</a>
+					 <a class="btn btn-primary btn-large shake shake-little" href="#">Learn more</a>
 				</p>
 			</div><h3><strong>登录</strong></h3>
 		<hr />
+		
 		</div>
 		
-		<div class="col-md-4 column">
+		
+		
+		<div class="col-md-4 column ">
 			<form class="form-horizontal" role="form" method="post" id="loginform">
 				<div class="form-group">
 					 
@@ -87,7 +93,10 @@
 				</div>
 			</form>
 		</div>
+		
+		
 	</div>
+	
 </div>
 	</body>
 </html>
