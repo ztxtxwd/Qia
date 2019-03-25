@@ -27,6 +27,9 @@ public class LoginController {
 	
 	@RequestMapping("/signin")
 	public Result signin(@RequestBody User user){
+		if(userService.findOne(user.getUsername())==null){
+			return new Result(false, "请填写正确的用户名和密码");
+		}
 		if (!(user.getUsername()!=null&&user.getUsername()!=""&&user.getPassword()!=null&&user.getPassword()!="")) {
 			return new Result(false, "请填写完整的用户名和密码");
 		}
