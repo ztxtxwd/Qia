@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>提问</title>
+		
+		<script src="./plugins/jQuery/jquery-2.2.3.min.js"></script>
+		<link href="./css/bootstrap.min.css" rel="stylesheet">
+		
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./plugins/angularjs/angular.min.js"></script>
+		<script src="./js/base.js"></script>
+		<script src="./js/controller/baseController.js"></script>
+		<script src="./js/service/questionService.js"></script>
+		<script src="./js/controller/questionController.js"></script>
+		<script type="text/javascript" src="./js/plugins/fadeinandout.js"></script>
+	</head>
+	<body ng-app="qia" ng-controller="questionController" ng-init="setUsername()">
+		<div class="container">
+				<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div ng-include="'navlogedin.html'"></div>
+					
+				</div>
+			</div>
+			<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="alert alert-success alert-dismissable">
+				 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				 <strong>注意！</strong> 一个好问题是解决问题的开始 <a href="#" class="alert-link">提问示例</a>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+					 <label for="inputSubject" class="col-sm-1 control-label">主题</label>
+					<div class="col-sm-11">
+						<input type="text" ng-model="question.title" class="form-control" id="inputSubject" />
+					</div>
+				</div>
+				<div class="form-group">
+					 <label for="inputVideo" class="col-sm-1 control-label">对应视频</label>
+					<div class="col-sm-11">
+						<input ng-model="question.video" type="text" class="form-control" id="inputVideo" />
+					</div>
+				</div>
+				<div class="form-group">
+					 <label for="inputDetail" class="col-sm-1 control-label">详细描述</label>
+					<div class="col-sm-11">
+						<textarea ng-model="question.detail" class="form-control" rows="20"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-1 col-sm-11">
+						 <button ng-click="submitQuestion()" class="btn btn-default">提交</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+	</body>
+</html>
