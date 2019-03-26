@@ -57,4 +57,6 @@ public class QuestionController {
 	public FullQuestion findOne(Long id,int pageNum,int pageSize){
 		return questionService.findOne(id, pageNum, pageSize);
 	}
+	
+	
 }

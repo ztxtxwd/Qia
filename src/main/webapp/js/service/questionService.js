@@ -11,4 +11,7 @@ app.service('questionService',function($http){
 	this.reply=function(comment){
 		return $http.post('./comment/add',comment);
 	}
+	this.search=function(keyword){
+		return $http.get("./solr/search?keyword="+keyword);
+	}
 })

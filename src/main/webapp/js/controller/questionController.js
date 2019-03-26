@@ -32,6 +32,15 @@ app.controller('questionController',function($scope,$controller,$location,questi
 			}
 		)
 	}
+	var keyword=$location.search()['keyword'];
+	$scope.search=function(){
+		questionService.search(keyword).success(
+			function(response){
+				$scope.searchResult=response;
+			}
+		)
+	}
+	
 	$scope.comment={content:'',uid:'',uname:''};
 	$scope.reply=function(){
 		$scope.comment.uid=sessionStorage.getItem('userId');
