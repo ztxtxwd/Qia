@@ -36,10 +36,10 @@
 				<dt>
 					问题详情
 				</dt>
-				<dd >
-					{{fullQuestion.question.detail}}
+				<dd ng-bind-html="fullQuestion.question.detail| trustHtml">
+					
 				</dd>
-				<!-- ng-bind-html="fullQuestion.question.detail| trustHtml" -->
+				<!--  -->
 			</dl>
 		</div>
 		<hr />
@@ -49,12 +49,21 @@
 			 <br />
 			 <button type="button" class="btn btn-default" ng-click="reply()">回复</button>
 		</div>
-		<div class="col-md-12 column" ng-repeat="c in fullQuestion.comments">
-			 	
-			 <hr />
-			 <div class="col-md-2 colum"><strong>{{c.uname}}</strong></div>
-			 <br>
-			 <div class="col-md-10 colum"><p id="comment">{{c.content}}</p></div>
+		<div class="row clearfix" ng-repeat="c in fullQuestion.comments">
+		
+			<div class="col-md-12 column">
+				 <div class="col-md-12 column">
+				 
+				 	<hr>
+				 </div>
+				 	
+				 
+				 <div class="col-md-1 colum"><strong>{{c.uname}}</strong></div>
+				 
+				 <div class="col-md-11 colum"><p id="comment" ng-bind-html="c.content| trustHtml"></p></div>
+				 
+				 
+			</div>
 		</div>
 		
 	</div>
