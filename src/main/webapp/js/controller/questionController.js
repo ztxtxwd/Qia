@@ -32,6 +32,7 @@ app.controller('questionController',function($scope,$controller,$location,questi
 			}
 		)
 	}
+	
 	var keyword=$location.search()['keyword'];
 	$scope.search=function(){
 		questionService.search(keyword).success(

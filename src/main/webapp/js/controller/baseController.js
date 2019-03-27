@@ -50,4 +50,11 @@ app.controller('baseController' ,function($scope,$http){
 		sessionStorage.removeItem('userId');
 		location.href='login.html';
 	}
+	$scope.toSearch=function(){
+		location.href='http://localhost/search_result.html#?keyword='+$scope.kw;
+		if($scope.currentPage=='search'){
+			location.reload();
+		}
+		
+	}
 });

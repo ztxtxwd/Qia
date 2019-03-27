@@ -1,4 +1,5 @@
 <br>
+
 <nav class="navbar navbar-default" role="navigation">
 						<div class="navbar-header">
 							 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="index.html">Qia</a>
@@ -12,11 +13,11 @@
 								<li class="{{currentPage=='about'?'active':''}}">
 									 <a href="about.html">关于</a>
 								</li>
-								<form class="navbar-form navbar-left" action="search_result.html#" method="get">
+								<form class="navbar-form navbar-left" >
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search" name="keyword">
+          <input type="text" class="form-control" placeholder="Search" name="keyword" ng-model="$parent.kw">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button class="btn btn-default" ng-click="$parent.toSearch()">Submit</button>
       </form>
 								
 							</ul>
