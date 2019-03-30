@@ -1,5 +1,7 @@
 # Qia
-[![LICENSE](https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![Badge](https://img.shields.io/badge/link-996.icu-red.svg)](https://github.com/996icu/996.ICU/blob/master/externals/instruction.md)
+[![HitCount](http://hits.dwyl.io/996icu/996.ICU.svg)](http://hits.dwyl.io/996icu/996.ICU)
+
 一个局域网问答平台
 
 技术选型：SpringBoot+Angular+Bootstrap
